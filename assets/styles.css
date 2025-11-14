@@ -19,6 +19,7 @@ body {
     text-align: center;
     max-width: 600px;
     width: 100%;
+    margin-bottom: 60px; /* 给footer留出空间 */
 }
 
 h1 {
@@ -39,6 +40,9 @@ h1 {
     transition: all 0.3s ease;
     margin-bottom: 3rem;
     backdrop-filter: blur(10px);
+    /* 移动端触摸优化 */
+    min-height: 44px;
+    touch-action: manipulation;
 }
 
 #zenButton:hover {
@@ -64,31 +68,77 @@ h1 {
     font-style: italic;
 }
 
+/* 移动端适配 - 只调整尺寸 */
 @media (max-width: 768px) {
-    h1 { font-size: 3rem; }
-    #zenButton { font-size: 1rem; padding: 14px 40px; }
-    #quoteDisplay { font-size: 1.1rem; }
+    body {
+        padding: 15px;
+        align-items: flex-start;
+        padding-top: 20vh;
+    }
+    
+    h1 { 
+        font-size: 4rem; 
+        margin-bottom: 2rem;
+    }
+    
+    #zenButton { 
+        font-size: 1rem; 
+        padding: 16px 40px;
+        margin-bottom: 2rem;
+    }
+    
+    #quoteDisplay { 
+        font-size: 1.1rem; 
+        line-height: 1.6;
+    }
 }
 
-/* 官方网站底部样式 */
+/* 小屏手机优化 */
+@media (max-width: 400px) {
+    h1 { 
+        font-size: 3rem; 
+        margin-bottom: 1.5rem;
+    }
+    
+    #zenButton { 
+        padding: 14px 35px;
+        margin-bottom: 1.5rem;
+    }
+    
+    #quoteDisplay { 
+        font-size: 1rem; 
+        padding: 0 15px;
+    }
+}
+
+/* 横屏优化 */
+@media (max-height: 500px) {
+    body {
+        padding-top: 10vh;
+    }
+    
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* 底部样式 */
 .site-footer {
     position: fixed;
-    bottom: 0;
+    bottom: 20px;
     left: 0;
     width: 100%;
-    padding: 40px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
     font-size: 0.9rem;
-    color: #cacaca;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    opacity: 0.8;
 }
 
-/* 确保主要内容不会被底部遮挡 */
-.container {
-    margin-bottom: 80px; /* 给底部留出空间 */
+/* 移动端footer适配 */
+@media (max-width: 768px) {
+    .site-footer {
+        bottom: 15px;
+        font-size: 0.8rem;
+    }
 }

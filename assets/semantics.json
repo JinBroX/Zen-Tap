@@ -2,70 +2,51 @@
   "version": "1.0",
   "language": "zh",
   "core_library": {
-    "111111": {
-      "name": "乾为天",
-      "core_imagery": "创造的能量，如天行健",
+    "sunrise_field": {
+      "name": "创造全息场",
+      "core_imagery": "如旭日初升的创造动力",
       "modern_meaning": "充满动力与创造力的时期",
       "keywords": ["创造", "动力", "领导力"],
-      "lines": {
-        "1": {"base_meaning": "潜龙勿用", "modern_base": "力量尚在积蓄，不宜贸然行动", "scenes": {}},
-        "2": {"base_meaning": "见龙在田", "modern_base": "才能开始显现，得到认可", "scenes": {}},
-        "3": {"base_meaning": "君子终日乾乾", "modern_base": "勤奋努力，保持警觉", "scenes": {}},
-        "4": {"base_meaning": "或跃在渊", "modern_base": "面临重要抉择，进退皆可", "scenes": {}},
-        "5": {"base_meaning": "飞龙在天", "modern_base": "处于巅峰，大展宏图", "scenes": {}},
-        "6": {"base_meaning": "亢龙有悔", "modern_base": "过度进取可能带来遗憾", "scenes": {}}
+      "secret_binary": "111111",
+      "dimensions": {
+        "1": {"modern_base": "全息场尚在积蓄，不宜贸然行动", "scenes": {}},
+        "2": {"modern_base": "潜能开始显现，得到认可", "scenes": {}},
+        "3": {"modern_base": "勤奋努力，保持警觉", "scenes": {}},
+        "4": {"modern_base": "面临重要抉择，进退皆可", "scenes": {}},
+        "5": {"modern_base": "处于巅峰，大展宏图", "scenes": {}},
+        "6": {"modern_base": "过度进取可能带来遗憾", "scenes": {}}
       }
     },
-    "000000": {
-      "name": "坤为地",
-      "core_imagery": "接纳的智慧，如地势坤",
+    "earth_field": {
+      "name": "接纳全息场",
+      "core_imagery": "如大地承载万物的包容力",
       "modern_meaning": "需要耐心与包容的阶段",
       "keywords": ["接纳", "耐心", "包容"],
-      "lines": {
-        "1": {"base_meaning": "履霜坚冰至", "modern_base": "察觉细微征兆，防患未然", "scenes": {}},
-        "2": {"base_meaning": "直方大", "modern_base": "保持内心的正直与宽广", "scenes": {}},
-        "3": {"base_meaning": "含章可贞", "modern_base": "内含光华而不显露", "scenes": {}},
-        "4": {"base_meaning": "括囊无咎", "modern_base": "谨慎言行，避免过失", "scenes": {}},
-        "5": {"base_meaning": "黄裳元吉", "modern_base": "以谦和姿态获得吉祥", "scenes": {}},
-        "6": {"base_meaning": "龙战于野", "modern_base": "阴柔至极而转刚强", "scenes": {}}
-      }
-    },
-    "111000": {
-      "name": "天地否",
-      "core_imagery": "天地不交，万物不通",
-      "modern_meaning": "暂时受阻，需要等待时机",
-      "keywords": ["等待", "受阻", "调整"],
-      "lines": {
-        "1": {"base_meaning": "拔茅茹以其汇", "modern_base": "同类相连，休戚与共", "scenes": {}},
-        "2": {"base_meaning": "包承小人吉", "modern_base": "包容接纳，转危为安", "scenes": {}},
-        "3": {"base_meaning": "包羞", "modern_base": "含羞忍辱，等待时机", "scenes": {}},
-        "4": {"base_meaning": "有命无咎", "modern_base": "顺应天命，可免过失", "scenes": {}},
-        "5": {"base_meaning": "休否大人吉", "modern_base": "困境将尽，大人吉祥", "scenes": {}},
-        "6": {"base_meaning": "倾否先否后喜", "modern_base": "闭塞终结，先忧后喜", "scenes": {}}
+      "secret_binary": "000000",
+      "dimensions": {
+        "1": {"modern_base": "察觉细微征兆，防患未然", "scenes": {}},
+        "2": {"modern_base": "保持内心的正直与宽广", "scenes": {}},
+        "3": {"modern_base": "内含光华而不显露", "scenes": {}},
+        "4": {"modern_base": "谨慎言行，避免过失", "scenes": {}},
+        "5": {"modern_base": "以谦和姿态获得吉祥", "scenes": {}},
+        "6": {"modern_base": "柔韧中展现内在力量", "scenes": {}}
       }
     }
   },
   "scenes_library": {
-    "111111": {
+    "sunrise_field": {
       "career": "在职场中展现领导力和创造力",
       "relationship": "在关系中保持主动但不强势",
       "mental": "内心充满力量感和自信的阶段",
       "family": "为家庭带来活力和方向",
       "health": "身体状况良好，精力充沛"
     },
-    "000000": {
+    "earth_field": {
       "career": "职场需要耐心积累的阶段",
       "relationship": "在关系中学会包容和理解",
       "mental": "内心需要平静和接纳",
       "family": "家庭氛围需要和谐包容",
       "health": "身体状况需要静养调理"
-    },
-    "111000": {
-      "career": "职场发展暂时受阻，等待时机",
-      "relationship": "关系沟通不畅，需要耐心",
-      "mental": "内心感到阻滞，需要调整",
-      "family": "家庭事务需要协调沟通",
-      "health": "健康状况需要关注调理"
     }
   }
 }
