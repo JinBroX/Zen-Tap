@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, #2a75d8 0%, #6a7fe4 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+}
+
+#zenButton {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1.1rem;
+    padding: 16px 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 3rem;
+    backdrop-filter: blur(10px);
+}
+
+#zenButton:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+#zenButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#quoteDisplay {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    min-height: 60px;
+    padding: 0 20px;
+}
+
+.loading {
+    opacity: 0.7;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    #zenButton { font-size: 1rem; padding: 14px 40px; }
+    #quoteDisplay { font-size: 1.1rem; }
+}
+
+/* 官方网站底部样式 */
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    color: #cacaca;
+}
+
+/* 确保主要内容不会被底部遮挡 */
+.container {
+    margin-bottom: 80px; /* 给底部留出空间 */
+}
