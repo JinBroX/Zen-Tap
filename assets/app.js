@@ -131,6 +131,7 @@ mainCode二进制: ${codesignData.mainCodeKey}
     }
 
     try {
+        console.time('API调用耗时');
         const response = await fetch('/api/proxy', {
             method: 'POST',
             headers: {
@@ -147,10 +148,12 @@ mainCode二进制: ${codesignData.mainCodeKey}
         }
 
         const data = await response.json();
+        console.timeEnd('API调用耗时');
         return data.choices[0].message.content;
 
     } catch (error) {
         console.error('API调用错误:', error);
+        console.timeEnd('API调用耗时');
         return `🌌 全息场连接中...请稍后重试。`;
     }
 }
@@ -159,9 +162,13 @@ window.generateInterpretation = async function() {
     const button = document.getElementById('zenButton');
     const resultDiv = document.getElementById('quoteDisplay');
 
+    // ⚡ 立即响应优化 - 让用户立即感知到变化
     button.disabled = true;
-    button.textContent = '全息扫描中...';
-    resultDiv.innerHTML = '<div class="loading">正在连接全息场，请保持静心...</div>';
+    button.textContent = '场域扫描中...';
+    resultDiv.innerHTML = '<div class="loading">全息场同频中...</div>';
+
+    // 给用户"扫描过程"的感知（600-800ms 最佳体验）
+    await new Promise(resolve => setTimeout(resolve, 700));
 
     try {
         console.log('开始加载语义库...');
@@ -170,6 +177,9 @@ window.generateInterpretation = async function() {
             await window.zenTapCore.loadLibrary();
             console.log('语义库加载成功');
         }
+
+        // 更新状态提示
+        resultDiv.innerHTML = '<div class="loading">📡 解析全息信号...</div>';
 
         console.log('开始生成Codesign...');
         const codesignData = generateCodesign();
@@ -184,6 +194,9 @@ window.generateInterpretation = async function() {
         codesignData.mainCodeKey = convertToBinaryKey(codesignData.mainCode);
         codesignData.transCodeKey = convertToBinaryKey(codesignData.transCode);
         console.log('Codesign键:', codesignData.mainCodeKey, codesignData.transCodeKey);
+
+        // 更新状态提示
+        resultDiv.innerHTML = '<div class="loading">✨ 转译智慧启示...</div>';
 
         const prompt = window.zenTapCore.generateInspiration(codesignData);
         console.log('Prompt生成成功');
