@@ -1,0 +1,9 @@
+{
+  "name": "zen-tap",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'No build process for static site'",
+    "build": "echo 'No build process for static site'"
+  }
+}
