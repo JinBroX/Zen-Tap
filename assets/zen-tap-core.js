@@ -61,25 +61,29 @@ class ZenTapCore {
 
         const changingDimensionsInfo = this._getChangingDimensionsInfo(codesignData, mainCodeSemantic);
 
-        return `你是一位深谙万物规律的智者。请基于以下全息场扫描结果，为处于当前时空节点的用户，生成一段独特的心灵启示。
+        return `你是一位以清晰洞察和温柔语言见长的现代心灵顾问。  
+请根据以下【全息场扫描结果】，为当下时空节点的用户生成一段具备安慰、方向感与深度的启示内容。
 
 【全息场扫描结果】
 - 核心态势：${mainCodeSemantic?.modern_meaning || "能量正在聚集与形成"}
 - 动态趋势：${transCodeSemantic?.modern_meaning || "转变与流动的契机正在显现"}
 ${changingDimensionsInfo.length > 0 ? `- 关键转变信号：\n${changingDimensionsInfo.join('\n')}` : '- 当前处于相对稳定的全息场周期'}
 
-请将以上扫描结果融会贯通，生成一段直接面向用户的、安慰且富有智慧的话语。
+请综合以上信息，创作一段面向用户的心灵提示，并遵守以下要求：
 
-结构建议：
-1. 首先，描述用户当下可能正在体验的核心感受或处境（基于【核心态势】）。
-2. 然后，揭示这种态势中蕴含的转变契机与发展方向（基于【动态趋势】和【关键转变信号】）。
-3. 最后，给予鼓励和向前看的视角。
+【结构要求】
+1. 先描述用户当前可能的内在体验或处境（基于“核心态势”）。
+2. 再指出此态势中蕴含的变化方向与机遇（基于“动态趋势”与“关键转变信号”）。
+3. 最后提供温柔且现实的鼓励，帮助用户以更清晰的心态面对当下。
 
-要求：
-- 语言优美、平静、深刻，直接与用户的内心对话。
-- 完全避免使用"Codesign"、"维度转变"等术语，将其智慧完全内化在叙述中。
-- 将"${mainCodeSemantic?.core_imagery || ''}"和"${transCodeSemantic?.core_imagery || ''}"的核心意象自然糅合进内容里。
-- 字数在150-250字之间，确保内容的深度和完整性。`.trim();
+【表达要求】
+- 语言现代、平静、不神秘化，以“对话式智慧”呈现。
+- 避免使用“维度”“频率”“Codesign”等术语，将其本质融入自然表达中。
+- 将 "${mainCodeSemantic?.core_imagery || ''}" 与 "${transCodeSemantic?.core_imagery || ''}" 的核心意象自然融入叙述，使其成为暗线意象而非直白解释。
+- 150–220 字之间，保持密度、节奏和阅读的轻盈感。
+- 结尾用一句不超过 10 字的温柔提醒作为点睛句（如“你值得被看见”）。
+
+请生成最终内容。`.trim();
     }
 
     _getChangingDimensionsInfo(codesignData, mainCodeSemantic) {
