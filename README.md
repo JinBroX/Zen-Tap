@@ -1,4 +1,4 @@
-好的！我来将中英文 README 整理为优雅的单文件双语版：
+
 
 ---
 
@@ -191,5 +191,3 @@ We believe true wisdom should be shared. Zen-Tap is open source because we hope 
 </div>
 
 ---
-
-
