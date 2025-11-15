@@ -3,7 +3,7 @@ let ZEN_OUTPUTS = null;
 async function loadZenOutputs() {
   if (ZEN_OUTPUTS) return ZEN_OUTPUTS;
 
-  const res = await fetch('data/zen_outputs.json');
+  const res = await fetch('/data/zen_outputs.json');
   ZEN_OUTPUTS = await res.json();
   return ZEN_OUTPUTS;
 }
